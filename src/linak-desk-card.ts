@@ -207,12 +207,10 @@ export class LinakDeskCard extends LitElement {
         flex-direction: column;
         flex: 1;
         position: relative;
-        padding: 0px;
-        border-radius: 4px;
         overflow: hidden;
       }
       .preview {
-        background: linear-gradient(to bottom, var(--primary-color), var(--dark-primary-color));
+        background: rgba(28, 28, 28);
         overflow: hidden;
         position: relative;
         min-height: 365px;
@@ -274,14 +272,14 @@ export class LinakDeskCard extends LitElement {
       .presets > paper-button {
         height: 40px;
         margin-bottom: 5px;
-        background-color: white;
+        background-color: rgba(128, 128, 128);
         border-radius: 20px;
         box-shadow: darkslategrey 0px 0px 36px;
         display: flex;
         justify-content: center;
         align-items: center;
         cursor: pointer;
-        color: rgb(3, 3, 3);
+        color: rgba(225, 225, 225);
         font-size: 18px;
         font-weight: 500;
       }
