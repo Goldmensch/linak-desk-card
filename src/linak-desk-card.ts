@@ -231,7 +231,6 @@ export class LinakDeskCard extends LitElement {
         width: 50px;
         overflow: hidden;
         height: 120px;
-        box-shadow: 0px 0px 36px darkslategrey;
       }
       .preview .knob .knob-button {
         display: flex;
@@ -274,7 +273,6 @@ export class LinakDeskCard extends LitElement {
         margin-bottom: 5px;
         background-color: rgba(128, 128, 128);
         border-radius: 20px;
-        box-shadow: darkslategrey 0px 0px 36px;
         display: flex;
         justify-content: center;
         align-items: center;
