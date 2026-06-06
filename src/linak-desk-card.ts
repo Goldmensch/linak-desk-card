@@ -68,11 +68,7 @@ export class LinakDeskCard extends LitElement {
   }
 
   get height(): number {
-    return this.relativeHeight + this.config.min_height;
-  }
-
-  get relativeHeight(): number {
-    return parseInt(this.hass.states[this.config.height_sensor]?.state, 10) || 0;
+    return parseInt(this.hass?.states[this.config.height_sensor]?.state, 10) || 0;
   }
 
   get connected(): boolean {
@@ -82,8 +78,9 @@ export class LinakDeskCard extends LitElement {
   get moving(): boolean {
     return this.hass.states[this.config.moving_sensor]?.state === 'on';
   }
+  
   get alpha(): number {
-    return (this.relativeHeight) / (this.config.max_height - this.config.min_height)
+    return (this.height - config.min_height) / (this.config.max_height - this.config.min_height)
   }
 
   protected shouldUpdate(changedProps: PropertyValues): boolean {
@@ -96,15 +93,21 @@ export class LinakDeskCard extends LitElement {
     }
 
     const newHass = changedProps.get('hass') as HomeAssistant | undefined;
-    if (newHass) {
-      return (
-        newHass.states[this.config?.desk] !== this.hass?.states[this.config?.desk]
-        || newHass.states[this.config?.connection_sensor]?.state !== this.hass?.states[this.config?.connection_sensor]?.state
-        || newHass.states[this.config?.height_sensor]?.state !== this.hass?.states[this.config?.height_sensor]?.state
-        || newHass.states[this.config?.moving_sensor]?.state !== this.hass?.states[this.config?.moving_sensor]?.state
-      );
+
+    if (!newHass) {
+      return false;
     }
-    return true;
+
+    const relevantEntities = [
+      this.config.desk,
+      this.config.height_sensor,
+      this.config.moving_sensor,
+      this.config.connection_sensor
+    ].filter((entityId): entityId is string => !!entityId);
+
+    return relevantEntities.some(entityId => 
+      oldHass.states[entityId] !== this.hass.states[entityId]
+    );
   }
 
   protected render(): TemplateResult | void {
