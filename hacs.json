@@ -1,6 +1,5 @@
 {
     "name": "LinakDesk Card",
     "render_readme": true,
-    "content_in_root": false,
-    "filename": "linak-desk-card.ts"
+    "filename": "linak-desk-card.js"
 }
