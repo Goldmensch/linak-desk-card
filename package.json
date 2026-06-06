@@ -1,6 +1,6 @@
 {
   "name": "linak-desk-card",
-  "version": "0.1",
+  "version": "0.1.0",
   "description": "Home Assistant Lovelace card for Linak desks",
   "keywords": [
     "home-assistant",
