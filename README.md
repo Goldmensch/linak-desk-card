@@ -4,7 +4,7 @@
 
 > [Home Assistant][home-assistant] Lovelace Card for controlling desks based on linak bluetooth controller.
 
-![linak-desk-card_preview](https://user-images.githubusercontent.com/9998984/107797805-a3a6c800-6d5b-11eb-863a-56ae0343995c.png)
+![linak-desk-card_preview](https://github.com/user-attachments/assets/c3adb767-2d4c-4093-be51-7a8eb737685b)
 
 Designed to work with https://github.com/j5lien/esphome-idasen-desk-controller
 
