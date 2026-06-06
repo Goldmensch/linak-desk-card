@@ -221,7 +221,7 @@ export class LinakDeskCard extends LitElement {
         transition: all 0.2s linear;
       }
       .preview .knob {
-        background: #fff;
+        background: rgb(85, 85, 85);
         position: absolute;
         display: flex;
         flex-direction: column;
@@ -239,7 +239,6 @@ export class LinakDeskCard extends LitElement {
         flex: 1;
       }
       .preview .knob .knob-button ha-icon {
-        color: #030303;
         cursor: pointer;
       }
       .preview .knob .knob-button:active {
@@ -254,7 +253,7 @@ export class LinakDeskCard extends LitElement {
         transition: all 0.2s linear;
       }
       .height span {
-        opacity: 0.6;
+        opacity: 0.9;
       }
       .presets {
         position: absolute;
@@ -271,13 +270,12 @@ export class LinakDeskCard extends LitElement {
       .presets > paper-button {
         height: 40px;
         margin-bottom: 5px;
-        background-color: rgba(128, 128, 128);
+        background-color: rgb(85, 85, 85);
         border-radius: 20px;
         display: flex;
         justify-content: center;
         align-items: center;
         cursor: pointer;
-        color: rgba(225, 225, 225);
         font-size: 18px;
         font-weight: 500;
       }
