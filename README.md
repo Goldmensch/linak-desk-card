@@ -1,4 +1,4 @@
-# LinakDesk Card by [@IhorSyerkov](https://github.com/IhorSyerkov)
+# LinakDesk Card by [@Goldmensch](https://github.com/Goldmensch)
 
 [![hacs][hacs-image]][hacs-url]
 
