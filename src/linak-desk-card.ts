@@ -80,7 +80,7 @@ export class LinakDeskCard extends LitElement {
   }
   
   get alpha(): number {
-    return (this.height - config.min_height) / (this.config.max_height - this.config.min_height)
+    return (this.height - this.config.min_height) / (this.config.max_height - this.config.min_height)
   }
 
   protected shouldUpdate(changedProps: PropertyValues): boolean {
@@ -106,7 +106,7 @@ export class LinakDeskCard extends LitElement {
     ].filter((entityId): entityId is string => !!entityId);
 
     return relevantEntities.some(entityId => 
-      oldHass.states[entityId] !== this.hass.states[entityId]
+      newHass.states[entityId] !== this.hass.states[entityId]
     );
   }
 
