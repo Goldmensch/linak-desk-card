@@ -7,8 +7,8 @@ import {
   TemplateResult,
   css,
   PropertyValues,
-  state,
 } from 'lit-element';
+import { state } from 'lit';
 import { HomeAssistant, LovelaceCardEditor } from 'custom-card-helpers';
 import type { LinakDeskCardConfig } from './types';
 import { localize } from './localize/localize';
