@@ -7,7 +7,7 @@ import {
   TemplateResult,
   css,
   PropertyValues,
-  internalProperty,
+  state,
 } from 'lit-element';
 import { HomeAssistant, LovelaceCardEditor } from 'custom-card-helpers';
 import type { LinakDeskCardConfig } from './types';
@@ -49,7 +49,7 @@ export class LinakDeskCard extends LitElement {
   }
 
   @property({ attribute: false }) public hass!: HomeAssistant;
-  @internalProperty() private config!: LinakDeskCardConfig;
+  @state() private config!: LinakDeskCardConfig;
 
   public setConfig(config: LinakDeskCardConfig): void {
     if (!config.desk || !config.height_sensor) {
